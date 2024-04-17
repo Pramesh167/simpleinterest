@@ -84,7 +84,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
           TextField(
             controller: rate,
             keyboardType: TextInputType.number,
-            decoration: const InputDecoration(labelText: 'Enter the rate'),
+            decoration: const InputDecoration(labelText: 'Enter the rate (%)'),
           ),
           TextField(
             controller: time,
@@ -111,7 +111,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
                 },
                 child: const Text(
                   style: TextStyle(fontSize: 20),
-                  'Reset',
+                  'Clear',
                 ),
               ),
             ],
@@ -127,7 +127,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
       ),
     );
   }
-
+//button to perform operation of calucation
   void calculate() {
     setState(() {
       var p = double.parse(principle.text);
@@ -136,7 +136,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
       result = (p * r * t / 100).toString();
     });
   }
-
+//for the reset button
   void clear() {
     setState(() {
       principle.text = '';
